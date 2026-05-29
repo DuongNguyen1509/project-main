@@ -1,90 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <link rel="stylesheet" href="../../shared/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Đăng nhập</title>
+    <link href="../../shared/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-
 <body>
-    <section class="vh-100" style="background-color: #eee;">
-        <div class="container h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
-                        <div class="card-body p-md-5">
-                            <div class="row justify-content-center">
-                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                    <p id ="sign-in-title" class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign in</p>
+  <div class="login-wrapper">
 
-                                    <form class="mx-1 mx-md-4">
+    <!-- Left panel -->
+    <div class="login-panel left-panel">
+      <div class="brand-block">
+        <div class="brand-logo">⬡</div>
+        <span class="brand-name">Nexora</span>
+      </div>
+      <div class="hero-text">
+        <h1>Chào mừng<br><em>trở lại.</em></h1>
+        <p>Đăng nhập để tiếp tục hành trình của bạn cùng chúng tôi.</p>
+      </div>
+      <div class="decorative-circle c1"></div>
+      <div class="decorative-circle c2"></div>
+      <div class="decorative-circle c3"></div>
+    </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input type="text" id="form3Example1c" class="form-control" />
-                                                <label id="your-name-title" class="form-label" for="form3Example1c">Your Name</label>
-                                            </div>
-                                        </div>
+    <!-- Right panel - form -->
+    <div class="login-panel right-panel">
+      <div class="form-wrapper">
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input type="email" id="form3Example3c" class="form-control" />
-                                                <label id="your-email-title" class="form-label" for="form3Example3c">Your Email</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input type="password" id="form3Example4c" class="form-control" />
-                                                <label id="password-title" class="form-label" for="form3Example4c">Password</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                            <div data-mdb-input-init class="form-outline flex-fill mb-0">
-                                                <input type="password" id="form3Example4cd" class="form-control" />
-                                                <label id="repeat-password-title" class="form-label" for="form3Example4cd">Repeat your
-                                                    password</label>
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value=""
-                                                id="form2Example3c" />
-                                            <label class="form-check-label" for="form2Example3">
-                                                I agree all statements in <a href="#!">Terms of service</a>
-                                            </label>
-                                        </div>
-
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button  id="login-button" type="button" data-mdb-button-init data-mdb-ripple-init
-                                                class="btn btn-primary btn-lg">Login</button>
-                                        </div>
-
-                                    </form>
-
-                                </div>
-                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                        class="img-fluid" alt="Sample image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="form-header">
+          <h2>Đăng nhập</h2>
+          <p>Nhập thông tin tài khoản của bạn</p>
         </div>
-    </section>
 
+        <form id="loginForm" novalidate>
+
+          <!-- Email -->
+          <div class="field-group" id="emailGroup">
+            <label for="email" class="field-label">Email</label>
+            <div class="input-shell">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="M2 7l10 7 10-7"/>
+              </svg>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="field-input"
+                placeholder="example@email.com"
+                autocomplete="email"
+              />
+              <span class="valid-check">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
+              </span>
+            </div>
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <!-- Password -->
+          <div class="field-group" id="passwordGroup">
+            <label for="password" class="field-label">Mật khẩu</label>
+            <div class="input-shell">
+              <svg class="field-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="11" width="18" height="11" rx="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="field-input"
+                placeholder="Nhập mật khẩu"
+                autocomplete="current-password"
+              />
+              <button type="button" class="toggle-pw" id="togglePw" aria-label="Hiện/ẩn mật khẩu">
+                <svg id="eyeOpen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg id="eyeClose" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="display:none">
+                  <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94"/>
+                  <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
+            <span class="field-error" id="passwordError"></span>
+          </div>
+
+          <!-- Remember me + Forgot -->
+          <div class="options-row">
+            <label class="remember-label">
+              <input type="checkbox" id="remember" name="remember" class="remember-check">
+              <span class="custom-check">
+                <svg viewBox="0 0 12 10" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="1 5 4.5 9 11 1"/>
+                </svg>
+              </span>
+              <span>Nhớ mật khẩu</span>
+            </label>
+            <a href="#" class="forgot-link">Quên mật khẩu?</a>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="submit-btn" id="loginBtn">
+            <span class="btn-text">Đăng nhập</span>
+            <span class="btn-arrow">→</span>
+            <span class="btn-loader" id="btnLoader" style="display:none">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+              </svg>
+            </span>
+          </button>
+
+          <!-- Success message -->
+          <div class="success-toast" id="successToast" style="display:none">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+            Đăng nhập thành công!
+          </div>
+
+        </form>
+
+        <p class="register-link">Chưa có tài khoản? <a href="#">Đăng ký ngay</a></p>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../../shared/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+  <script src="./script.js"></script>
 </body>
-<script src="../../shared/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
-<script src="./script.js"></script>
 </html>
