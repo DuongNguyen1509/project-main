@@ -1,46 +1,615 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
-    <link rel="stylesheet" href="./shared/bootstrap-5.0.2-dist/css/bootstrap.min.css">
-</head>
-<body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">Trang chủ</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="/pages/about">Giới thiệu</a>
-                <a class="nav-link" href="/pages/home">Trang Home</a>
-            </div>
-        </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopVN – Trang chủ</title>
+    <link rel="stylesheet" href="./shared/bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
 
-</body>
-<script src="./shared/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <span class="brand-logo">Shop<em>VN</em></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/about">Giới thiệu</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="shopDrop" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
+              <ul class="dropdown-menu" aria-labelledby="shopDrop">
+                <li><a class="dropdown-item" href="#">Điện thoại</a></li>
+                <li><a class="dropdown-item" href="#">Laptop</a></li>
+                <li><a class="dropdown-item" href="#">Phụ kiện</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/sign-in">Đăng nhập</a>
+            </li>
+          </ul>
+          <div class="nav-icons d-flex align-items-center gap-3">
+            <a href="#" class="nav-icon-btn" title="Yêu thích">
+              <i class="bi bi-heart"></i>
+              <span class="badge-dot">3</span>
+            </a>
+            <a href="#" class="nav-icon-btn" title="Giỏ hàng">
+              <i class="bi bi-bag"></i>
+              <span class="badge-dot">5</span>
+            </a>
+            <a href="#" class="nav-icon-btn" title="Tài khoản">
+              <i class="bi bi-person"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== BANNER ========== -->
+    <section class="banner-section">
+      <div id="heroBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroBanner" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#heroBanner" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#heroBanner" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="banner-slide banner-slide--1">
+              <div class="banner-content">
+                <span class="banner-tag">Mới nhất 2025</span>
+                <h1>Công nghệ <em>đỉnh cao</em><br/>trong tầm tay</h1>
+                <p>Khám phá hàng ngàn sản phẩm chính hãng, giá tốt nhất thị trường.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#products" class="btn btn-primary-custom">Mua ngay <i class="bi bi-arrow-right"></i></a>
+                  <a href="#" class="btn btn-outline-custom">Xem bộ sưu tập</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="banner-slide banner-slide--2">
+              <div class="banner-content">
+                <span class="banner-tag">Giảm đến 50%</span>
+                <h1>Flash Sale <em>hàng ngày</em><br/>không thể bỏ lỡ</h1>
+                <p>Ưu đãi giới hạn mỗi ngày lúc 12h trưa – săn deal ngay hôm nay!</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#products" class="btn btn-primary-custom">Săn deal <i class="bi bi-lightning-fill"></i></a>
+                  <a href="#" class="btn btn-outline-custom">Xem tất cả</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="banner-slide banner-slide--3">
+              <div class="banner-content">
+                <span class="banner-tag">Miễn phí vận chuyển</span>
+                <h1>Giao hàng <em>siêu tốc</em><br/>toàn quốc</h1>
+                <p>Đặt hàng trước 15h, nhận ngay trong ngày tại nội thành TP.HCM & HN.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#products" class="btn btn-primary-custom">Đặt hàng <i class="bi bi-truck"></i></a>
+                  <a href="#" class="btn btn-outline-custom">Tìm hiểu thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroBanner" data-bs-slide="prev">
+          <span class="carousel-ctrl"><i class="bi bi-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroBanner" data-bs-slide="next">
+          <span class="carousel-ctrl"><i class="bi bi-chevron-right"></i></span>
+        </button>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="stats-bar">
+        <div class="container">
+          <div class="row g-0 text-center">
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <i class="bi bi-shield-check"></i>
+                <div>
+                  <strong>Chính hãng 100%</strong>
+                  <span>Cam kết bảo hành</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <i class="bi bi-truck"></i>
+                <div>
+                  <strong>Giao hàng nhanh</strong>
+                  <span>Toàn quốc 24h</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <i class="bi bi-arrow-counterclockwise"></i>
+                <div>
+                  <strong>Đổi trả 30 ngày</strong>
+                  <span>Không cần lý do</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="stat-item">
+                <i class="bi bi-headset"></i>
+                <div>
+                  <strong>Hỗ trợ 24/7</strong>
+                  <span>Tư vấn miễn phí</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DANH MỤC SẢN PHẨM ========== -->
+    <section class="section-category" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Danh mục <em>nổi bật</em></h2>
+          <a href="#" class="section-link">Xem tất cả <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="row g-3">
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-phone"></i></div>
+              <span>Điện thoại</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-laptop"></i></div>
+              <span>Laptop</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-headphones"></i></div>
+              <span>Tai nghe</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-smartwatch"></i></div>
+              <span>Đồng hồ</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-camera"></i></div>
+              <span>Máy ảnh</span>
+            </a>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <a href="#" class="category-card">
+              <div class="category-icon"><i class="bi bi-grid"></i></div>
+              <span>Phụ kiện</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== THANH TÌM KIẾM ========== -->
+    <section class="section-search" id="search">
+      <div class="container">
+        <div class="search-wrapper">
+          <div class="search-box">
+            <i class="bi bi-search search-icon"></i>
+            <input type="text" class="form-control search-input" placeholder="Tìm kiếm sản phẩm... (VD: iPhone 15, MacBook Air)" />
+            <div class="search-filters">
+              <select class="form-select filter-select">
+                <option value="">Tất cả danh mục</option>
+                <option>Điện thoại</option>
+                <option>Laptop</option>
+                <option>Tai nghe</option>
+                <option>Đồng hồ</option>
+                <option>Máy ảnh</option>
+                <option>Phụ kiện</option>
+              </select>
+              <select class="form-select filter-select">
+                <option value="">Mức giá</option>
+                <option>Dưới 2 triệu</option>
+                <option>2 – 5 triệu</option>
+                <option>5 – 15 triệu</option>
+                <option>Trên 15 triệu</option>
+              </select>
+            </div>
+            <button class="btn btn-search">Tìm kiếm</button>
+          </div>
+          <div class="search-tags">
+            <span class="search-tag-label">Tìm nhiều:</span>
+            <a href="#" class="search-tag">iPhone 16</a>
+            <a href="#" class="search-tag">Samsung S25</a>
+            <a href="#" class="search-tag">AirPods</a>
+            <a href="#" class="search-tag">MacBook M4</a>
+            <a href="#" class="search-tag">Apple Watch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== DANH SÁCH SẢN PHẨM ========== -->
+    <section class="section-products" id="products">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Sản phẩm <em>mới nhất</em></h2>
+          <div class="product-sort">
+            <select class="form-select sort-select">
+              <option>Mới nhất</option>
+              <option>Bán chạy nhất</option>
+              <option>Giá thấp đến cao</option>
+              <option>Giá cao đến thấp</option>
+              <option>Đánh giá cao nhất</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row g-4" id="productGrid">
+
+          <!-- Product Card 1 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-new">Mới</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f8f5f0/c8a97e?text=iPhone+16" alt="iPhone 16" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Apple</span>
+                <h3 class="product-name"><a href="#">iPhone 16 Pro Max 256GB</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  <span>(128)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">32.990.000₫</span>
+                  <span class="price-old">36.990.000₫</span>
+                  <span class="price-discount">-11%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-sale">-20%</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f0f5f8/7eb8c8?text=Samsung+S25" alt="Samsung S25" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Samsung</span>
+                <h3 class="product-name"><a href="#">Samsung Galaxy S25 Ultra</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                  <span>(84)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">28.490.000₫</span>
+                  <span class="price-old">35.490.000₫</span>
+                  <span class="price-discount">-20%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-hot">Hot</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f5f0f8/a87ec8?text=MacBook+Air" alt="MacBook Air" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Apple</span>
+                <h3 class="product-name"><a href="#">MacBook Air M4 13" 16GB</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <span>(256)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">29.990.000₫</span>
+                  <span class="price-old">32.990.000₫</span>
+                  <span class="price-discount">-9%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f0f8f4/7ec8a0?text=AirPods+Pro" alt="AirPods Pro" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Apple</span>
+                <h3 class="product-name"><a href="#">AirPods Pro 2 – USB‑C</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  <span>(312)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">5.990.000₫</span>
+                  <span class="price-old">6.990.000₫</span>
+                  <span class="price-discount">-14%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-new">Mới</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f8f5f0/c8b07e?text=Watch+Ultra" alt="Apple Watch" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Apple</span>
+                <h3 class="product-name"><a href="#">Apple Watch Ultra 2 49mm</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                  <span>(67)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">19.990.000₫</span>
+                  <span class="price-old">22.490.000₫</span>
+                  <span class="price-discount">-11%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-sale">-15%</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f0f5f8/7e9cc8?text=Sony+WH1000" alt="Sony WH-1000XM5" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Sony</span>
+                <h3 class="product-name"><a href="#">Sony WH-1000XM5 Wireless</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                  <span>(198)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">7.140.000₫</span>
+                  <span class="price-old">8.390.000₫</span>
+                  <span class="price-discount">-15%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 7 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f5f8f0/a0c87e?text=Dell+XPS+15" alt="Dell XPS 15" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Dell</span>
+                <h3 class="product-name"><a href="#">Dell XPS 15 OLED i9 32GB</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                  <span>(43)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">52.990.000₫</span>
+                  <span class="price-old">58.990.000₫</span>
+                  <span class="price-discount">-10%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 8 -->
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="product-card">
+              <div class="product-badges">
+                <span class="badge-hot">Hot</span>
+              </div>
+              <div class="product-actions">
+                <button class="action-btn" title="Yêu thích"><i class="bi bi-heart"></i></button>
+                <button class="action-btn" title="Xem nhanh"><i class="bi bi-eye"></i></button>
+              </div>
+              <a href="#" class="product-img-wrap">
+                <img src="https://placehold.co/300x280/f8f0f0/c87e7e?text=Xiaomi+14T" alt="Xiaomi 14T" class="product-img" />
+              </a>
+              <div class="product-info">
+                <span class="product-brand">Xiaomi</span>
+                <h3 class="product-name"><a href="#">Xiaomi 14T Pro 512GB</a></h3>
+                <div class="product-rating">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                  <span>(91)</span>
+                </div>
+                <div class="product-price-row">
+                  <span class="price-current">16.990.000₫</span>
+                  <span class="price-old">19.990.000₫</span>
+                  <span class="price-discount">-15%</span>
+                </div>
+                <button class="btn btn-cart w-100"><i class="bi bi-cart-plus"></i> Thêm vào giỏ</button>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /row -->
+      </div>
+    </section>
+
+    <!-- ========== PHÂN TRANG ========== -->
+    <section class="section-pagination">
+      <div class="container">
+        <div class="pagination-wrapper">
+          <span class="pagination-info">Hiển thị 8 / 128 sản phẩm</span>
+          <nav aria-label="Phân trang sản phẩm">
+            <ul class="pagination pagination-custom">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Trang trước">
+                  <i class="bi bi-chevron-left"></i>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Trang sau">
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="pagination-goto">
+            <span>Đến trang</span>
+            <input type="number" class="form-control" min="1" max="16" value="1" />
+            <button class="btn btn-goto">Đi</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+              <div class="footer-brand">
+                <span class="brand-logo">Shop<em>VN</em></span>
+                <p>Hệ thống bán lẻ công nghệ hàng đầu Việt Nam. Cam kết chính hãng, giá tốt, giao nhanh.</p>
+                <div class="footer-socials">
+                  <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+                  <a href="#" class="social-btn"><i class="bi bi-tiktok"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <h4 class="footer-heading">Sản phẩm</h4>
+              <ul class="footer-links">
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Tai nghe</a></li>
+                <li><a href="#">Đồng hồ thông minh</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-2 col-md-6 col-6">
+              <h4 class="footer-heading">Hỗ trợ</h4>
+              <ul class="footer-links">
+                <li><a href="#">Hướng dẫn mua hàng</a></li>
+                <li><a href="#">Chính sách đổi trả</a></li>
+                <li><a href="#">Bảo hành</a></li>
+                <li><a href="#">Tra cứu đơn hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <h4 class="footer-heading">Đăng ký nhận ưu đãi</h4>
+              <p class="footer-newsletter-desc">Nhận ngay voucher 100.000₫ cho đơn hàng đầu tiên!</p>
+              <div class="newsletter-form">
+                <input type="email" class="form-control" placeholder="Nhập email của bạn..." />
+                <button class="btn btn-subscribe">Đăng ký</button>
+              </div>
+              <div class="footer-contact mt-3">
+                <p><i class="bi bi-telephone-fill"></i> Hotline: <a href="tel:1900xxxx">1900 xxxx</a></p>
+                <p><i class="bi bi-envelope-fill"></i> <a href="mailto:support@shopvn.vn">support@shopvn.vn</a></p>
+                <p><i class="bi bi-geo-alt-fill"></i> 123 Nguyễn Huệ, Q.1, TP.HCM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+            <p class="mb-0">© 2025 ShopVN. Tất cả quyền được bảo lưu.</p>
+            <div class="footer-payment">
+              <span>Thanh toán:</span>
+              <span class="payment-icon">Visa</span>
+              <span class="payment-icon">MasterCard</span>
+              <span class="payment-icon">MoMo</span>
+              <span class="payment-icon">ZaloPay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./shared/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
